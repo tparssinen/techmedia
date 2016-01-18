@@ -1,4 +1,7 @@
-$(".nav-smooth-js a[href^='#']").on('click', function(e) {
+'use strict';
+/* global $ */
+
+$('.nav-smooth-js a[href^=\'#\']').on('click', function(e) {
 
   // prevent default anchor click behavior
   e.preventDefault();
@@ -6,7 +9,9 @@ $(".nav-smooth-js a[href^='#']").on('click', function(e) {
   // store hash
   var hash = this.hash;
   var posY = 0;
-  if(hash!='#top') posY = $(hash).offset().top;
+  if(hash !== '#top') {
+    posY = $(hash).offset().top;
+  }
 
   // animate
   $('html, body').animate({
@@ -15,8 +20,12 @@ $(".nav-smooth-js a[href^='#']").on('click', function(e) {
 
     // when done, add hash to url
     // (default click behaviour)
-    if(hash!='#top') window.location.hash = hash;
-    else window.location.hash = '';
+    if(hash !== '#top') {
+      window.location.hash = hash;
+    }
+    else {
+      window.location.hash = '';
+    }
   });
 
 });

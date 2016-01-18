@@ -1,19 +1,22 @@
-$(".nav-smooth-js li a[href^='#']").on('click', function(e) {
+$(".nav-smooth-js a[href^='#']").on('click', function(e) {
 
   // prevent default anchor click behavior
   e.preventDefault();
 
   // store hash
   var hash = this.hash;
+  var posY = 0;
+  if(hash!='#top') posY = $(hash).offset().top;
 
   // animate
   $('html, body').animate({
-    scrollTop: $(hash).offset().top
+    scrollTop: posY
   }, 300, function(){
 
     // when done, add hash to url
     // (default click behaviour)
-    window.location.hash = hash;
+    if(hash!='#top') window.location.hash = hash;
+    else window.location.hash = '';
   });
 
 });

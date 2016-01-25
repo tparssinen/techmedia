@@ -38,6 +38,28 @@ header {
   }
 }
 
+.carousel .glyphicon:after {
+  content: "";
+  background: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(1.5);
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: 0 0 15px white;
+}
+
+.carousel-caption {
+  background: rgba(0,0,0,.5);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 50px;
+}
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;

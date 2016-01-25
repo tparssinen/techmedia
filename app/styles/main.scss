@@ -38,6 +38,10 @@ header {
   }
 }
 
+.marketing h2 {
+  @extend .opensans;
+}
+
 .carousel .glyphicon:after {
   content: "";
   background: black;

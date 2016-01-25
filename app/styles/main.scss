@@ -5,15 +5,32 @@
 // endbower
 
 // Top bar and logo
-.top-bar {
-  background: #000;
-  text-align: center;
-  height: 2em;
+header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
+  @extend .opensans;
+  @extend .clearfix;
+
+  .nav {
+    background-color: white;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    li {
+      display: inline-block;
+      float: none;
+    }
+  }
+}
+
+.top-bar {
+  background: #000;
+  text-align: center;
+  height: 3em;
 
   img {
     max-height: 100%;

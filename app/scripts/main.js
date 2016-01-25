@@ -10,7 +10,7 @@ $('.nav-smooth-js a[href^=\'#\']').on('click', function(e) {
   var hash = this.hash;
   var posY = 0;
   if(hash !== '#top') {
-    posY = $(hash).offset().top;
+    posY = $(hash).offset().top - $('header').height();
   }
 
   // animate

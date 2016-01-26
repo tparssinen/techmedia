@@ -1,14 +1,14 @@
-$icon-font-path: '../fonts/';
+//$icon-font-path: '../fonts/';
 
-@font-face {
+/*@font-face {
   font-family: 'Open Sans';
   font-style:  normal;
   font-weight: 700;
   src: url($icon-font-path+'OpenSans-ExtraBold.ttf') format('ttf');
-}
+}*/
 
 .opensans {
-  font-family: 'Open Sans';
+  //font-family: 'Open Sans';
   font-weight: 700;
   text-transform: uppercase;
 }
